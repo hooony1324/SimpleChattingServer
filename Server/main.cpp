@@ -5,6 +5,7 @@
 #define PACKET_SIZE 1024
 #define PORT 4444
 
+
 #include <iostream> // c++ stadard input output
 #include <winsock2.h> // winsock
 #include <windows.h> // ZeroMemory
@@ -67,6 +68,7 @@ int main()
 	SOCKET server = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
 
 	SOCKADDR_IN addr = { 0 };
+
 	addr.sin_addr.s_addr = htonl(INADDR_ANY);
 	addr.sin_port = PORT;
 	addr.sin_family = AF_INET;

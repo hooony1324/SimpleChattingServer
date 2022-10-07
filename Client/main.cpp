@@ -4,6 +4,12 @@
 #define PACKET_SIZE 1024
 #define PORT 4444
 
+#define SERVER_IP "121.141.66.31"
+// 121.141.66.31
+// 121.141.66.254
+
+
+
 #include <iostream>
 #include <winsock2.h>
 #include <Windows.h>
@@ -40,7 +46,7 @@ int main()
 	SOCKET server = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
 	SOCKADDR_IN addr = { 0 };
-	addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+	addr.sin_addr.s_addr = inet_addr(SERVER_IP);
 	addr.sin_port = PORT;
 	addr.sin_family = AF_INET;
 
